@@ -1,18 +1,36 @@
 /* 
    OKUNE Consulting Services - Main Stylesheet
-   Palette: Navy (#0a192f), Cyan (#64ffda), Gold (#ffd700), Slate (#8892b0), White (#e6f1ff)
+   New Corporate Palette: Navy Deep (#012952), Corporate Blue (#02458b), Vibrant Cyan (#219de4), Light Gray (#e6e9ee), Gold (#ffd700)
 */
 
 :root {
-    --bg-navy: #0a192f;
-    --bg-light-navy: #112240;
-    --bg-lightest-navy: #233554;
-    --text-slate: #8892b0;
-    --text-light-slate: #a8b2d1;
-    --text-white: #e6f1ff;
-    --accent-cyan: #64ffda;
+    /* Backgrounds - Nueva Paleta Corporativa */
+    --bg-navy: #012952;
+    /* Navy profundo - Principal */
+    --bg-light-navy: #02458b;
+    /* Azul corporativo - Secundario */
+    --bg-lightest-navy: #023a73;
+    /* Azul intermedio - Terciario */
+    --bg-light: #e6e9ee;
+    /* Gris claro - Secciones alternas */
+
+    /* Text Colors - Nueva Paleta */
+    --text-slate: rgba(230, 233, 238, 0.65);
+    /* Texto secundario */
+    --text-light-slate: rgba(230, 233, 238, 0.85);
+    /* Texto primario claro */
+    --text-white: #e6e9ee;
+    /* Texto principal */
+    --text-dark: #012952;
+    /* Texto sobre fondos claros */
+
+    /* Accent Colors */
+    --accent-cyan: #219de4;
+    /* Cyan vibrante - Acentos principales */
     --accent-gold: #ffd700;
-    /* Copper/Gold variant */
+    /* Gold - Acentos secundarios */
+
+    /* Fonts */
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Montserrat', sans-serif;
     --transition: all 0.3s ease-in-out;
