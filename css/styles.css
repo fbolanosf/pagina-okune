@@ -2155,7 +2155,8 @@ ul {
     /* Hero Section - Mobile Optimized */
     .hero {
         min-height: 500px;
-        padding: 60px 0 40px;
+        padding: 100px 0 40px;
+        /* Incrementado de 60px a 100px para evitar solapamiento con navbar */
     }
 
     .hero h1 {
