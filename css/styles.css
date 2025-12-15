@@ -2104,6 +2104,30 @@ ul {
 /* Responsive */
 @media (max-width: 768px) {
 
+    /* Container padding para móviles */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 8px 0;
+    }
+
+    /* Logo responsive */
+    .logo-img-large {
+        height: 50px !important;
+        /* Reducido para mobile */
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .brand-motto {
+        font-size: 0.65rem;
+    }
+
     .masterclass-grid,
     .benefits-container,
     .mc-col-features,
@@ -2128,20 +2152,36 @@ ul {
         display: block;
     }
 
+    /* Hero Section - Mobile Optimized */
+    .hero {
+        min-height: 500px;
+        padding: 60px 0 40px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
+        font-size: 1.8rem !important;
+        /* Más pequeño para móviles */
+        line-height: 1.3;
+        margin-bottom: 15px;
+        padding: 0 10px;
     }
 
     .hero-subheadline {
-        font-size: 1.1rem;
-        margin-bottom: 25px;
+        font-size: 1rem !important;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        line-height: 1.5;
     }
 
     .hero-attributes {
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 30px;
+        gap: 8px;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .attribute-item {
+        font-size: 0.85rem;
     }
 
     .attribute-separator {
@@ -2151,23 +2191,77 @@ ul {
     .hero-cta {
         flex-direction: column;
         gap: 12px;
-        margin-top: 35px;
+        margin-top: 25px;
+        padding: 0 15px;
     }
 
     .hero-cta .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
+        padding: 14px 24px;
+        font-size: 13px;
     }
 
+    /* Sections */
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* About & Contact */
     .about-grid,
     .contact-wrapper {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
+    /* Value Cards - Mobile */
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .value-card {
+        padding: 18px;
+    }
+
+    .value-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Cases Grid */
+    .cases-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Comparison */
     .comparison-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Timeline */
     .timeline::after {
         left: 31px;
     }
@@ -2187,6 +2281,7 @@ ul {
         right: auto;
     }
 
+    /* Methodology */
     .methodology-flow {
         flex-direction: column;
     }
@@ -2215,7 +2310,100 @@ ul {
         border-right: 5px solid transparent;
         border-top: 5px solid var(--text-slate);
     }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 25px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    .mouse {
+        width: 22px;
+        height: 36px;
+    }
 }
+
+/* Extra small screens (phones < 480px) */
+@media (max-width: 480px) {
+
+    /* Logo aún más pequeño */
+    .logo-img-large {
+        height: 40px !important;
+    }
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .brand-motto {
+        font-size: 0.6rem;
+    }
+
+    /* Hero para pantallas muy pequeñas */
+    .hero h1 {
+        font-size: 1.5rem !important;
+        padding: 0 5px;
+    }
+
+    .hero-subheadline {
+        font-size: 0.9rem !important;
+        padding: 0 5px;
+    }
+
+    .attribute-item {
+        font-size: 0.8rem;
+    }
+
+    .hero-cta .btn {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    /* Cards más compactos */
+    .service-card,
+    .value-card {
+        padding: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Stats en una columna */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        padding: 60px 0 30px;
+    }
+}
+
+
 
 /* ============================================
    SCROLL INDICATOR - Enhanced Animation
