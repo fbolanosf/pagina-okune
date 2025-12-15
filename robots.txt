@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.okune.com/sitemap.xml
+
+# Disallow unnecessary files
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.json$
+Disallow: /*.txt$
+
+# Allow important resources
+Allow: /assets/images/
+Allow: /assets/videos/
