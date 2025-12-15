@@ -1181,14 +1181,50 @@ ul {
 }
 
 .data-item h3 {
-    font-size: 3.5rem;
-    color: var(--accent-cyan);
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--text-white);
+    /* Blanco brillante #e6e9ee */
     display: inline-block;
+    font-family: var(--font-heading);
+    letter-spacing: -3px;
+    /* Gradiente blanco brillante para efecto premium */
+    background: linear-gradient(135deg, #e6e9ee 0%, #ffffff 50%, #e6e9ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Sutil glow cyan */
+    filter: drop-shadow(0 0 25px rgba(33, 157, 228, 0.25));
+    animation: numberGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes numberGlow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(33, 157, 228, 0.2));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 35px rgba(33, 157, 228, 0.35));
+    }
 }
 
 .data-item span {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--accent-cyan);
+    /* % en cyan vibrante #219de4 */
+    text-shadow: 0 0 20px rgba(33, 157, 228, 0.6),
+        0 0 40px rgba(33, 157, 228, 0.3);
+    margin-left: 5px;
+}
+
+.data-item p {
+    color: var(--text-light-slate);
+    /* Texto descriptivo más claro */
+    font-size: 1.05rem;
+    margin-top: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 /* Cases Section */
@@ -1803,10 +1839,31 @@ ul {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 800;
-    color: var(--accent-cyan);
+    color: var(--text-white);
+    /* Números en blanco #e6e9ee */
     font-family: var(--font-heading);
+    letter-spacing: -2px;
+    text-shadow: 0 0 30px rgba(33, 157, 228, 0.3);
+    /* Sutil glow cyan */
+    background: linear-gradient(135deg, #e6e9ee 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* Símbolo % en cyan vibrante */
+.stat-number::after {
+    content: attr(data-percentage);
+    color: var(--accent-cyan);
+    /* % en cyan vibrante #219de4 */
+    font-size: 0.6em;
+    vertical-align: super;
+    margin-left: 4px;
+    -webkit-text-fill-color: var(--accent-cyan);
+    text-shadow: 0 0 20px rgba(33, 157, 228, 0.5);
 }
 
 .mc-urgency {
