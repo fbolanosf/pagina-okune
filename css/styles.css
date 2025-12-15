@@ -185,6 +185,13 @@ ul {
     /* Increased by 40% from 55px */
     margin-right: 15px;
     transition: var(--transition);
+    /* Enhanced visibility with elegant glow */
+    filter: brightness(1.15) drop-shadow(0 0 12px rgba(100, 255, 218, 0.35));
+}
+
+.logo-img-large:hover {
+    filter: brightness(1.25) drop-shadow(0 0 20px rgba(100, 255, 218, 0.5));
+    transform: scale(1.02);
 }
 
 .logo-text {
