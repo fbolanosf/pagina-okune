@@ -2438,79 +2438,44 @@ ul {
     /* Chrome/Safari */
 }
 
+/* ================================================
+   CAROUSEL PREMIUM EJECUTIVO - Azul Oscuro + Dorado
+   ================================================ */
+
 .article-card {
     min-width: 300px;
-    /* Gradiente DRAMÁTICO 1 - Slate a Emerald vibrante */
-    background: linear-gradient(135deg,
-            rgba(30, 41, 59, 0.95) 0%,
-            rgba(5, 150, 105, 0.85) 100%);
+    /* Fondo azul oscuro UNIFICADO - elimina monotonía vs background */
+    background: rgba(15, 23, 42, 0.92);
+    /* Slate-900 */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(16, 185, 129, 0.4);
-    /* Emerald border visible */
+    transition: all 0.3s ease;
+    /* Border sutil */
+    border: 1px solid rgba(100, 150, 200, 0.15);
     flex-shrink: 0;
+    /* Shadows suaves */
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(16, 185, 129, 0.2) inset,
-        0 0 20px rgba(16, 185, 129, 0.15);
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Cards inactivas ligeramente transparentes */
+    opacity: 0.88;
+    transform: scale(0.98);
 }
 
-/* Card 2, 5, 8... - Purple a Magenta/Rosa VIBRANTE */
-.article-card:nth-child(3n+2) {
-    background: linear-gradient(135deg,
-            rgba(88, 28, 135, 0.95) 0%,
-            rgba(219, 39, 119, 0.85) 100%);
-    border: 2px solid rgba(236, 72, 153, 0.5);
-    /* Pink border */
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(236, 72, 153, 0.2) inset,
-        0 0 20px rgba(236, 72, 153, 0.2);
-}
-
-/* Card 3, 6, 9... - Navy a Amber/Naranja CÁLIDO */
-.article-card:nth-child(3n) {
-    background: linear-gradient(135deg,
-            rgba(15, 23, 42, 0.95) 0%,
-            rgba(217, 119, 6, 0.85) 100%);
-    border: 2px solid rgba(251, 191, 36, 0.5);
-    /* Amber border */
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(251, 191, 36, 0.2) inset,
-        0 0 20px rgba(251, 191, 36, 0.15);
-}
-
+/* Card ACTIVA/HOVER - destaque sutil premium */
+.article-card.active,
 .article-card:hover {
-    transform: translateY(-10px) scale(1.03);
-}
-
-/* Hover específico DRAMÁTICO para cada variante */
-.article-card:nth-child(3n+1):hover {
-    border-color: rgba(16, 185, 129, 0.8);
-    /* Emerald intenso */
+    opacity: 1;
+    transform: scale(1.0) translateY(-3px);
+    /* Glow MUY sutil cyan/dorado */
+    border-color: rgba(33, 157, 228, 0.25);
     box-shadow:
-        0 15px 50px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(16, 185, 129, 0.5);
-}
-
-.article-card:nth-child(3n+2):hover {
-    border-color: rgba(236, 72, 153, 0.9);
-    /* Pink intenso */
-    box-shadow:
-        0 15px 50px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(236, 72, 153, 0.5);
-}
-
-.article-card:nth-child(3n):hover {
-    border-color: rgba(251, 191, 36, 0.8);
-    /* Amber intenso */
-    box-shadow:
-        0 15px 50px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(251, 191, 36, 0.4);
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        0 15px 45px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(33, 157, 228, 0.12);
+    /* Glow SUTIL */
 }
 
 /* Featured Article Card - LinkedIn */
@@ -2645,62 +2610,113 @@ ul {
     pointer-events: none;
 }
 
+/* Overlay oscuro en imagen para legibilidad */
+.article-image-real::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(15, 23, 42, 0.3) 40%,
+            rgba(15, 23, 42, 0.6) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
 .article-card-featured:hover .article-image-real img {
     transform: scale(1.05);
 }
 
+/* Badge DESTACADO - dorado premium sutil */
 .featured-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--accent-gold);
-    color: var(--bg-navy);
-    padding: 5px 12px;
-    border-radius: 4px;
+    top: 12px;
+    right: 12px;
+    /* Background dorado SUTIL, no neón */
+    background: rgba(255, 215, 0, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #fbbf24;
+    /* Amber-400 */
+    padding: 4px 12px;
+    border-radius: 12px;
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.article-card-featured .article-content {
-    background-color: var(--bg-light-navy);
+/* Texto: Alto Contraste para eliminar monotonía azul */
+
+/* Categoría - gris claro */
+.article-tag {
+    color: #cbd5e1;
+    /* Slate-300 */
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Título - blanco */
 .article-card-featured .article-content h3 {
-    color: var(--accent-cyan);
+    color: #f1f5f9;
+    /* Slate-100 - casi blanco */
     font-size: 1.15rem;
+    line-height: 1.4;
+    margin: 10px 0 12px;
 }
 
+/* Extracto - gris claro, max 2 líneas */
+.article-content p {
+    color: #94a3b8;
+    /* Slate-400 */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    /* Max 2 líneas con ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Año - gris claro */
 .article-meta {
     font-size: 0.85rem;
-    color: var(--text-slate);
-    margin-top: 10px;
+    color: #94a3b8;
+    /* Slate-400 */
+    margin-top: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+/* CTA "Leer en LinkedIn" - limpio y elegante */
 .btn-featured {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 18px;
-    background: rgba(230, 241, 255, 0.1);
-    color: var(--text-white);
-    border: 1px solid rgba(230, 241, 255, 0.3);
-    border-radius: 4px;
+    padding: 10px 20px;
+    /* Background cyan muy sutil */
+    background: rgba(33, 157, 228, 0.1);
+    color: #219de4;
+    /* Cyan vibrante */
+    border: 1px solid rgba(33, 157, 228, 0.3);
+    border-radius: 6px;
     font-weight: 600;
-    transition: var(--transition);
-    text-decoration: none;
     font-size: 0.9rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
 }
 
 .btn-featured:hover {
-    background: rgba(230, 241, 255, 0.15);
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
+    background: rgba(33, 157, 228, 0.2);
+    border-color: rgba(33, 157, 228, 0.6);
+    color: #f1f5f9;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px -8px rgba(100, 255, 218, 0.3);
+    box-shadow: 0 6px 15px rgba(33, 157, 228, 0.2);
 }
 
 .article-card-featured .article-image img {
