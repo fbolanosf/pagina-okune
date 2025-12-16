@@ -2896,7 +2896,8 @@ ul {
 
 .article-card {
     min-width: 300px;
-    background-color: var(--bg-light-navy);
+    /* ELIMINADO: background azul que bloqueaba glass */
+    background-color: transparent !important;
     border-radius: 8px;
     overflow: hidden;
     transition: var(--transition);
