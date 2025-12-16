@@ -3649,13 +3649,16 @@ ul {
         text-align: center;
     }
 }
+
 /* ===============================================================
-   FORZAR GLASS EFFECT - REGLA DEFINITIVA CON MÁXIMA PRIORIDAD
+   BODY AZUL MARINO OSCURO - Elegante y Premium
+   Más oscuro que el fondo para romper monotonía
    =============================================================== */
 
 .article-card .article-content,
 .article-card-featured .article-content,
 .article-card.article-card-featured .article-content {
+    /* Eliminar cualquier background previo */
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
@@ -3671,11 +3674,31 @@ ul {
     right: 0 !important;
     bottom: 0 !important;
     z-index: -1 !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.22) 100%) !important;
-    backdrop-filter: blur(20px) saturate(200%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
-    border-top: 2px solid rgba(255, 255, 255, 0.35) !important;
-    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.18), inset 0 3px 6px rgba(255, 255, 255, 0.2), 0 0 25px rgba(100, 255, 218, 0.1) !important;
+
+    /* Gradiente AZUL MARINO OSCURO - Más oscuro que #012952 */
+    background: linear-gradient(135deg,
+            #001529 0%,
+            /* Navy profundo casi negro */
+            #00192b 50%,
+            /* Navy intermedio */
+            #000a14 100%
+            /* Negro azulado */
+        ) !important;
+
+    /* Borders elegantes con toques de color */
+    border-top: 1.5px solid rgba(255, 215, 0, 0.15);
+    /* Gold sutil arriba */
+    border-bottom: 1px solid rgba(33, 157, 228, 0.1);
+    /* Cyan sutil abajo */
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+    /* Shadows profundas para elegancia */
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 2px rgba(255, 215, 0, 0.08),
+        /* Glow gold interno arriba */
+        inset 0 -1px 2px rgba(33, 157, 228, 0.08) !important;
+    /* Glow cyan interno abajo */
 }
