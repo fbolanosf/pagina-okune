@@ -2478,13 +2478,14 @@ ul {
     /* Glow SUTIL */
 }
 
-/* Featured Article Card - SIN background azul para mostrar glass */
+/* Featured Article Card - FORZAR TRANSPARENCIA TOTAL */
+.article-card.article-card-featured,
 .article-card-featured {
     min-width: 350px;
     max-width: 380px;
-    /* ELIMINADO: background azul LinkedIn que bloqueaba el glass */
-    background: transparent;
-    /* Transparente para que se vea el glass del body */
+    /* FORZAR transparencia con !important */
+    background: transparent !important;
+    background-color: transparent !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 16px;
@@ -2775,9 +2776,9 @@ ul {
     z-index: -1;
     /* DEBAJO del contenido */
 
-    /* GLASS EFFECT REAL */
-    background: rgba(255, 255, 255, 0.16);
-    /* Blanco 16% más visible */
+    /* GLASS EFFECT REAL - FORZADO con !important */
+    background: rgba(255, 255, 255, 0.16) !important;
+    /* Blanco 16% FORZADO */
     backdrop-filter: blur(14px) saturate(180%);
     -webkit-backdrop-filter: blur(14px) saturate(180%);
     /* Safari */
