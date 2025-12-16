@@ -2808,27 +2808,37 @@ ul {
 
 .article-tag {
     font-size: 0.75rem;
-    color: var(--accent-cyan);
+    color: rgba(255, 255, 255, 0.95);
+    /* Casi blanco para contraste */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     margin-bottom: 10px;
     display: block;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    /* Glow cyan */
 }
 
 .article-content h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
-    color: var(--text-white);
+    color: #ffffff;
+    /* Blanco puro */
     line-height: 1.4;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow */
 }
 
 .article-content p {
     font-size: 0.9rem;
-    color: var(--text-slate);
+    color: rgba(255, 255, 255, 0.85);
+    /* Más brillante */
     margin-bottom: 20px;
+    line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
