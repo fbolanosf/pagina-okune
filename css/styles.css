@@ -1134,7 +1134,8 @@ ul {
             rgba(1, 41, 82, 0.65) 100%);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    padding: 35px 30px;
+    padding: 28px 25px 25px;
+    /* Reducido para compactar */
     border-radius: 16px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1.5px solid rgba(33, 157, 228, 0.2);
@@ -1144,8 +1145,8 @@ ul {
         0 5px 15px rgba(33, 157, 228, 0.1);
     display: flex;
     flex-direction: column;
-    min-height: 420px;
-    /* Altura mínima para simetría */
+    min-height: 360px;
+    /* Reducido de 420px para cards más compactos */
 }
 
 .service-card:hover {
@@ -1163,37 +1164,60 @@ ul {
 }
 
 .service-icon {
-    font-size: 36px;
+    font-size: 34px;
+    /* Ligeramente reducido */
     color: var(--accent-cyan);
-    /* Cyan vibrante */
-    margin-bottom: 20px;
+    /* Cyan por defecto */
+    margin-bottom: 18px;
     filter: drop-shadow(0 0 10px rgba(33, 157, 228, 0.4));
+    transition: all 0.3s ease;
 }
 
-/* Outcomes - Línea fuerte */
+/* Iconos alternados con gold para variedad visual */
+.service-card:nth-child(odd) .service-icon {
+    color: var(--accent-gold);
+    /* Gold en cards impares */
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.4));
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--accent-gold);
+    /* Títulos en gold para contraste */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Outcomes - Línea fuerte en cyan para destacar */
 .service-outcome {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    /* Ligeramente reducido */
     font-weight: 600;
-    color: var(--text-white);
-    line-height: 1.5;
-    margin: 15px 0 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(33, 157, 228, 0.15);
+    color: var(--accent-cyan);
+    /* Cyan vibrante para outcomes */
+    line-height: 1.45;
+    margin: 10px 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(33, 157, 228, 0.2);
 }
 
 .service-list {
-    margin: 20px 0;
+    margin: 16px 0;
     flex-grow: 1;
     /* Ocupa espacio disponible */
 }
 
 .service-list li {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    /* Ligeramente reducido */
     color: var(--text-light-slate);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    /* Reducido de 12px */
     position: relative;
     padding-left: 20px;
-    line-height: 1.6;
+    line-height: 1.5;
+    /* Reducido de 1.6 */
 }
 
 .service-list li::before {
