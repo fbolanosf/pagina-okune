@@ -2440,25 +2440,74 @@ ul {
 
 .article-card {
     min-width: 300px;
-    background: rgba(17, 34, 64, 0.7);
+    /* Gradiente base - slate oscuro con toque púrpura */
+    background: linear-gradient(135deg,
+            rgba(30, 41, 59, 0.85) 0%,
+            rgba(45, 35, 75, 0.75) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1.5px solid rgba(139, 92, 246, 0.2);
+    /* Border púrpura sutil */
     flex-shrink: 0;
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(100, 255, 218, 0.05) inset;
+        0 0 0 1px rgba(139, 92, 246, 0.08) inset;
+}
+
+/* Card alternado 1 - Teal/Cyan */
+.article-card:nth-child(even) {
+    background: linear-gradient(135deg,
+            rgba(13, 42, 58, 0.85) 0%,
+            rgba(6, 78, 95, 0.75) 100%);
+    border-color: rgba(20, 184, 166, 0.25);
+    /* Teal border */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(20, 184, 166, 0.08) inset;
+}
+
+/* Card alternado 2 - Navy profundo con gold accent */
+.article-card:nth-child(3n) {
+    background: linear-gradient(135deg,
+            rgba(1, 41, 82, 0.85) 0%,
+            rgba(15, 23, 42, 0.8) 100%);
+    border-color: rgba(255, 215, 0, 0.2);
+    /* Gold border */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 215, 0, 0.08) inset;
 }
 
 .article-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: rgba(100, 255, 218, 0.25);
+}
+
+/* Hover específico para cada variante */
+.article-card:nth-child(odd):hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    /* Púrpura */
     box-shadow:
         0 15px 45px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(100, 255, 218, 0.2);
+        0 0 25px rgba(139, 92, 246, 0.3);
+}
+
+.article-card:nth-child(even):hover {
+    border-color: rgba(20, 184, 166, 0.6);
+    /* Teal */
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(20, 184, 166, 0.3);
+}
+
+.article-card:nth-child(3n):hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    /* Gold */
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(255, 215, 0, 0.25);
 }
 
 /* Featured Article Card - LinkedIn */
