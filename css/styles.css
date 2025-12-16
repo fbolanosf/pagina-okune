@@ -2765,7 +2765,7 @@ ul {
     border-radius: 0 0 14px 14px;
 }
 
-/* Capa GLASS usando ::before - vive DEBAJO del contenido */
+/* Capa GLASS usando ::before - MÁS VISTOSO Y ATRACTIVO */
 .article-content::before {
     content: '';
     position: absolute;
@@ -2774,22 +2774,29 @@ ul {
     right: 0;
     bottom: 0;
     z-index: -1;
-    /* DEBAJO del contenido */
 
-    /* GLASS EFFECT REAL - FORZADO con !important */
-    background: rgba(255, 255, 255, 0.16) !important;
-    /* Blanco 16% FORZADO */
-    backdrop-filter: blur(14px) saturate(180%);
-    -webkit-backdrop-filter: blur(14px) saturate(180%);
-    /* Safari */
+    /* GLASS MÁS INTENSO Y VISIBLE */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.24) 0%,
+            rgba(255, 255, 255, 0.18) 100%) !important;
+    /* Gradiente blanco para más profundidad */
 
-    /* Border glass en la parte superior */
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px) saturate(200%);
+    /* Blur MÁS intenso */
+    -webkit-backdrop-filter: blur(18px) saturate(200%);
 
-    /* Shadow para profundidad */
+    /* Border MÁS VISIBLE con glow */
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Shadows MÁS PRONUNCIADOS para profundidad */
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 10px 40px rgba(0, 0, 0, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 2px 4px rgba(255, 255, 255, 0.15),
+        0 0 20px rgba(100, 255, 218, 0.08);
+    /* Glow cyan sutil */
 }
 
 /* Contenido sobre la capa glass */
