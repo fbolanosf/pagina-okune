@@ -2694,16 +2694,16 @@ ul {
     gap: 8px;
 }
 
-/* CTA "Leer en LinkedIn" - limpio y elegante */
+/* CTA "Leer en LinkedIn" - limpio y elegante CON MÁS CONTRASTE */
 .btn-featured {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    /* Background cyan muy sutil */
-    background: rgba(33, 157, 228, 0.1);
-    color: #219de4;
-    /* Cyan vibrante */
-    border: 1px solid rgba(33, 157, 228, 0.3);
+    /* Background más visible */
+    background: rgba(33, 157, 228, 0.15);
+    color: #60d3fa;
+    /* Cyan más claro para contraste */
+    border: 1.5px solid rgba(33, 157, 228, 0.4);
     border-radius: 6px;
     font-weight: 600;
     font-size: 0.9rem;
@@ -2712,11 +2712,11 @@ ul {
 }
 
 .btn-featured:hover {
-    background: rgba(33, 157, 228, 0.2);
-    border-color: rgba(33, 157, 228, 0.6);
-    color: #f1f5f9;
+    background: rgba(33, 157, 228, 0.3);
+    border-color: rgba(33, 157, 228, 0.7);
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(33, 157, 228, 0.2);
+    box-shadow: 0 8px 20px rgba(33, 157, 228, 0.25);
 }
 
 .article-card-featured .article-image img {
@@ -2742,8 +2742,14 @@ ul {
     font-size: 3rem;
 }
 
+/* Body de contenido - GRIS ANTRACITA (NO azul) para evitar monotonía */
 .article-content {
     padding: 20px;
+    /* Fondo gris antracita/negro azulado neutral */
+    background: rgba(30, 41, 59, 0.95);
+    /* Slate-800 - más oscuro que card base */
+    /* Separador sutil superior */
+    border-top: 1px solid rgba(100, 150, 200, 0.1);
 }
 
 .article-tag {
