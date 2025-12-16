@@ -1411,8 +1411,10 @@ ul {
     display: block;
     font-size: 2rem;
     color: var(--accent-cyan);
+    /* Default cyan */
     margin-bottom: 10px;
     text-shadow: 0 0 15px rgba(33, 157, 228, 0.5);
+    font-weight: bold;
 }
 
 .metric-value {
@@ -1422,11 +1424,53 @@ ul {
     color: var(--text-white);
     font-family: var(--font-heading);
     margin-bottom: 8px;
-    /* Gradiente blanco brillante */
+    /* Gradiente blanco brillante por defecto */
     background: linear-gradient(135deg, #e6e9ee 0%, #ffffff 50%, #e6e9ee 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Colores para métricas de MEJORA (↑) - Verde vibrante */
+.impact-metric:nth-child(3) .metric-icon,
+.impact-metric:nth-child(6) .metric-icon {
+    color: #00ff88;
+    /* Verde brillante */
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6),
+        0 0 40px rgba(0, 255, 136, 0.3);
+}
+
+.impact-metric:nth-child(3) .metric-value,
+.impact-metric:nth-child(6) .metric-value {
+    /* Gradiente verde brillante */
+    background: linear-gradient(135deg, #00ff88 0%, #00ffaa 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
+}
+
+/* Colores para métricas de REDUCCIÓN (↓) - Gold/Naranja */
+.impact-metric:nth-child(1) .metric-icon,
+.impact-metric:nth-child(2) .metric-icon,
+.impact-metric:nth-child(4) .metric-icon,
+.impact-metric:nth-child(5) .metric-icon {
+    color: #ffd700;
+    /* Gold vibrante */
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.impact-metric:nth-child(1) .metric-value,
+.impact-metric:nth-child(2) .metric-value,
+.impact-metric:nth-child(4) .metric-value,
+.impact-metric:nth-child(5) .metric-value {
+    /* Gradiente gold brillante */
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
 }
 
 .metric-label {
