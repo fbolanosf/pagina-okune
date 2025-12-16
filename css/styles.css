@@ -1117,58 +1117,243 @@ ul {
 }
 
 /* Services Section */
+/* Services Grid - 3x2 Simétrico */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas */
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
 .service-card {
-    background: rgba(17, 34, 64, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 12px;
+    /* Gradiente elegante */
+    background: linear-gradient(135deg,
+            rgba(2, 69, 139, 0.75) 0%,
+            rgba(2, 58, 115, 0.7) 50%,
+            rgba(1, 41, 82, 0.65) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 35px 30px;
+    border-radius: 16px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1.5px solid rgba(33, 157, 228, 0.2);
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.37),
-        0 0 0 1px rgba(100, 255, 218, 0.05) inset;
+        0 10px 40px rgba(1, 41, 82, 0.4),
+        0 0 0 1px rgba(33, 157, 228, 0.05) inset,
+        0 5px 15px rgba(33, 157, 228, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    /* Altura mínima para simetría */
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(100, 255, 218, 0.3);
-    background: rgba(17, 34, 64, 0.8);
+    transform: translateY(-12px);
+    border-color: rgba(33, 157, 228, 0.5);
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(100, 255, 218, 0.2),
-        0 0 0 1px rgba(100, 255, 218, 0.1) inset;
+        0 20px 50px rgba(1, 41, 82, 0.6),
+        0 0 30px rgba(33, 157, 228, 0.3),
+        0 0 0 2px rgba(33, 157, 228, 0.4) inset;
+}
+
+.service-card:hover .service-cta {
+    opacity: 1;
+    transform: translateX(5px);
 }
 
 .service-icon {
-    font-size: 32px;
-    color: var(--accent-gold);
+    font-size: 36px;
+    color: var(--accent-cyan);
+    /* Cyan vibrante */
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(33, 157, 228, 0.4));
+}
+
+/* Outcomes - Línea fuerte */
+.service-outcome {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-white);
+    line-height: 1.5;
+    margin: 15px 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(33, 157, 228, 0.15);
 }
 
 .service-list {
-    margin-top: 15px;
+    margin: 20px 0;
+    flex-grow: 1;
+    /* Ocupa espacio disponible */
 }
 
 .service-list li {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-light-slate);
+    margin-bottom: 12px;
     position: relative;
-    padding-left: 15px;
+    padding-left: 20px;
+    line-height: 1.6;
 }
 
 .service-list li::before {
-    content: '▹';
+    content: '→';
     position: absolute;
     left: 0;
     color: var(--accent-cyan);
+    font-weight: bold;
 }
+
+/* CTAs "Ver detalle" */
+.service-cta {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: auto;
+    /* Empuja al final del card */
+    padding: 10px 0;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.service-cta:hover {
+    opacity: 1;
+    color: var(--text-white);
+}
+
+/* Subt\u00edtulos renovados */
+.section-subtitle-main {
+    font-size: 1.2rem;
+    font-weight: 600 !important;
+    color: var(--text-white) !important;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.section-subtitle-sub {
+    font-size: 0.95rem;
+    color: var(--text-slate) !important;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* ================================================
+   BLOQUE DE IMPACTO COMPROBADO - Premium Design
+   ================================================ */
+
+.impact-proof-section {
+    margin-top: 80px;
+    padding: 50px 40px;
+    background: linear-gradient(135deg,
+            rgba(1, 41, 82, 0.6) 0%,
+            rgba(2, 58, 115, 0.5) 100%);
+    border-radius: 20px;
+    border: 1.5px solid rgba(33, 157, 228, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-proof-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(33, 157, 228, 0.05) 0%, transparent 70%);
+}
+
+.impact-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.impact-source {
+    font-size: 0.85rem;
+    color: var(--text-slate);
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.impact-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.impact-metric {
+    background: linear-gradient(135deg,
+            rgba(2, 69, 139, 0.4) 0%,
+            rgba(1, 41, 82, 0.3) 100%);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(33, 157, 228, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(1, 41, 82, 0.3);
+}
+
+.impact-metric:hover {
+    transform: translateY(-5px);
+    border-color: rgba(33, 157, 228, 0.4);
+    box-shadow: 0 10px 25px rgba(33, 157, 228, 0.2);
+}
+
+.metric-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--accent-cyan);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(33, 157, 228, 0.5);
+}
+
+.metric-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-white);
+    font-family: var(--font-heading);
+    margin-bottom: 8px;
+    /* Gradiente blanco brillante */
+    background: linear-gradient(135deg, #e6e9ee 0%, #ffffff 50%, #e6e9ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light-slate);
+    line-height: 1.4;
+    text-transform: lowercase;
+}
+
+.impact-disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-slate);
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 
 /* Why Us */
 .comparison-grid {
@@ -2650,18 +2835,38 @@ ul {
         font-size: 1.1rem;
     }
 
-    /* Services Grid */
+    /* Services Grid - Mobile 1 columna */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .service-card {
-        padding: 25px;
+        padding: 30px 25px;
+        min-height: auto;
     }
 
     .service-card h3 {
         font-size: 1.3rem;
+    }
+
+    /* Impact Metrics Grid - Mobile 2x3 */
+    .impact-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .impact-proof-section {
+        padding: 40px 25px;
+        margin-top: 60px;
+    }
+
+    .impact-title {
+        font-size: 1.15rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
     }
 
     /* Cases Grid */
