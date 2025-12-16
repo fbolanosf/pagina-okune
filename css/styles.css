@@ -2444,6 +2444,8 @@ ul {
 
 .article-card {
     min-width: 300px;
+    min-height: 520px;
+    /* ALTURA UNIFORME para todas las cards */
     /* Fondo azul oscuro UNIFICADO - elimina monotonía vs background */
     background: rgba(15, 23, 42, 0.92);
     /* Slate-900 */
