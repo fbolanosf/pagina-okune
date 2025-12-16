@@ -2478,27 +2478,32 @@ ul {
     /* Glow SUTIL */
 }
 
-/* Featured Article Card - LinkedIn */
+/* Featured Article Card - SIN background azul para mostrar glass */
 .article-card-featured {
     min-width: 350px;
     max-width: 380px;
-    background: linear-gradient(135deg, rgba(10, 102, 194, 0.9) 0%, rgba(0, 65, 130, 0.9) 100%);
+    /* ELIMINADO: background azul LinkedIn que bloqueaba el glass */
+    background: transparent;
+    /* Transparente para que se vea el glass del body */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 16px;
     overflow: hidden;
-    border: 2px solid var(--accent-cyan);
-    box-shadow: 0 15px 45px -15px rgba(100, 255, 218, 0.5);
+    /* Border más sutil para look glass */
+    border: 1.5px solid rgba(100, 255, 218, 0.25);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(100, 255, 218, 0.1);
     position: relative;
-    animation: pulse-border 3s ease-in-out infinite;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .article-card-featured:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(100, 255, 218, 0.4);
     box-shadow:
-        0 20px 60px -10px rgba(100, 255, 218, 0.7),
-        0 0 30px rgba(100, 255, 218, 0.3);
+        0 15px 50px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(100, 255, 218, 0.15);
 }
 
 @keyframes pulse-border {
