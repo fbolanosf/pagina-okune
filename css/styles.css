@@ -1377,6 +1377,46 @@ ul {
         0 0 0 1px rgba(33, 157, 228, 0.1) inset;
     position: relative;
     transform: translateZ(0);
+    /* Animación de entrada escalonada */
+    opacity: 0;
+    animation: fadeInUpStaggered 0.8s ease forwards;
+}
+
+/* Entrada escalonada elegante */
+@keyframes fadeInUpStaggered {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.impact-metric:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.impact-metric:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.impact-metric:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.impact-metric:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.impact-metric:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.impact-metric:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 /* Efecto de brillo superior para más profundidad */
@@ -1397,25 +1437,43 @@ ul {
 .impact-metric:hover {
     transform: translateY(-8px) scale(1.03);
     /* Más elevación */
-    border-color: rgba(33, 157, 228, 0.5);
+    border-color: rgba(62, 207, 142, 0.5);
+    /* Verde suave en hover */
     /* Shadows más pronunciados */
     box-shadow:
         0 6px 15px rgba(1, 41, 82, 0.4),
         0 15px 40px rgba(1, 41, 82, 0.5),
         0 35px 65px rgba(0, 0, 0, 0.5),
-        0 0 35px rgba(33, 157, 228, 0.35),
-        0 0 0 2px rgba(33, 157, 228, 0.4) inset;
+        0 0 35px rgba(62, 207, 142, 0.35),
+        /* Glow verde suave */
+        0 0 0 2px rgba(62, 207, 142, 0.4) inset;
 }
 
 .metric-icon {
     display: block;
     font-size: 2rem;
-    color: #00ff88;
-    /* Verde brillante - todas son mejoras */
+    color: #3ecf8e;
+    /* Verde profesional suave (no chillante) */
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6),
-        0 0 40px rgba(0, 255, 136, 0.3);
+    text-shadow: 0 0 20px rgba(62, 207, 142, 0.5),
+        0 0 40px rgba(62, 207, 142, 0.25);
     font-weight: bold;
+    /* Animación sutil de pulso */
+    animation: iconPulseSubtle 3s ease-in-out infinite;
+}
+
+@keyframes iconPulseSubtle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
 }
 
 .metric-value {
@@ -1425,12 +1483,26 @@ ul {
     color: var(--text-white);
     font-family: var(--font-heading);
     margin-bottom: 8px;
-    /* Gradiente verde brillante - todas son mejoras */
-    background: linear-gradient(135deg, #00ff88 0%, #00ffaa 50%, #00ff88 100%);
+    /* Gradiente verde profesional suave */
+    background: linear-gradient(135deg, #3ecf8e 0%, #4ee6a3 50%, #3ecf8e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
+    filter: drop-shadow(0 0 10px rgba(62, 207, 142, 0.3));
+    /* Animación de brillo sutil */
+    animation: numberGlowSubtle 4s ease-in-out infinite;
+}
+
+@keyframes numberGlowSubtle {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 8px rgba(62, 207, 142, 0.25));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(62, 207, 142, 0.4));
+    }
 }
 
 .metric-label {
