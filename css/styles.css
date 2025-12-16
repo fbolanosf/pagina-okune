@@ -3649,3 +3649,33 @@ ul {
         text-align: center;
     }
 }
+/* ===============================================================
+   FORZAR GLASS EFFECT - REGLA DEFINITIVA CON MÁXIMA PRIORIDAD
+   =============================================================== */
+
+.article-card .article-content,
+.article-card-featured .article-content,
+.article-card.article-card-featured .article-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.article-card .article-content::before,
+.article-card-featured .article-content::before,
+.article-card.article-card-featured .article-content::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: -1 !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.22) 100%) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.35) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.18), inset 0 3px 6px rgba(255, 255, 255, 0.2), 0 0 25px rgba(100, 255, 218, 0.1) !important;
+}
