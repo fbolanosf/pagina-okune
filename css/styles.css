@@ -2483,6 +2483,8 @@ ul {
 .article-card-featured {
     min-width: 350px;
     max-width: 380px;
+    min-height: 520px;
+    /* Altura mínima para uniformidad */
     /* FORZAR transparencia con !important */
     background: transparent !important;
     background-color: transparent !important;
