@@ -2440,74 +2440,77 @@ ul {
 
 .article-card {
     min-width: 300px;
-    /* Gradiente base - slate oscuro con toque púrpura */
+    /* Gradiente DRAMÁTICO 1 - Slate a Emerald vibrante */
     background: linear-gradient(135deg,
-            rgba(30, 41, 59, 0.85) 0%,
-            rgba(45, 35, 75, 0.75) 100%);
+            rgba(30, 41, 59, 0.95) 0%,
+            rgba(5, 150, 105, 0.85) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1.5px solid rgba(139, 92, 246, 0.2);
-    /* Border púrpura sutil */
+    border: 2px solid rgba(16, 185, 129, 0.4);
+    /* Emerald border visible */
     flex-shrink: 0;
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(139, 92, 246, 0.08) inset;
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(16, 185, 129, 0.2) inset,
+        0 0 20px rgba(16, 185, 129, 0.15);
 }
 
-/* Card alternado 1 - Teal/Cyan */
-.article-card:nth-child(even) {
+/* Card 2, 5, 8... - Purple a Magenta/Rosa VIBRANTE */
+.article-card:nth-child(3n+2) {
     background: linear-gradient(135deg,
-            rgba(13, 42, 58, 0.85) 0%,
-            rgba(6, 78, 95, 0.75) 100%);
-    border-color: rgba(20, 184, 166, 0.25);
-    /* Teal border */
+            rgba(88, 28, 135, 0.95) 0%,
+            rgba(219, 39, 119, 0.85) 100%);
+    border: 2px solid rgba(236, 72, 153, 0.5);
+    /* Pink border */
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(20, 184, 166, 0.08) inset;
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(236, 72, 153, 0.2) inset,
+        0 0 20px rgba(236, 72, 153, 0.2);
 }
 
-/* Card alternado 2 - Navy profundo con gold accent */
+/* Card 3, 6, 9... - Navy a Amber/Naranja CÁLIDO */
 .article-card:nth-child(3n) {
     background: linear-gradient(135deg,
-            rgba(1, 41, 82, 0.85) 0%,
-            rgba(15, 23, 42, 0.8) 100%);
-    border-color: rgba(255, 215, 0, 0.2);
-    /* Gold border */
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(217, 119, 6, 0.85) 100%);
+    border: 2px solid rgba(251, 191, 36, 0.5);
+    /* Amber border */
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 215, 0, 0.08) inset;
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(251, 191, 36, 0.2) inset,
+        0 0 20px rgba(251, 191, 36, 0.15);
 }
 
 .article-card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-10px) scale(1.03);
 }
 
-/* Hover específico para cada variante */
-.article-card:nth-child(odd):hover {
-    border-color: rgba(139, 92, 246, 0.5);
-    /* Púrpura */
+/* Hover específico DRAMÁTICO para cada variante */
+.article-card:nth-child(3n+1):hover {
+    border-color: rgba(16, 185, 129, 0.8);
+    /* Emerald intenso */
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(139, 92, 246, 0.3);
+        0 15px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(16, 185, 129, 0.5);
 }
 
-.article-card:nth-child(even):hover {
-    border-color: rgba(20, 184, 166, 0.6);
-    /* Teal */
+.article-card:nth-child(3n+2):hover {
+    border-color: rgba(236, 72, 153, 0.9);
+    /* Pink intenso */
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(20, 184, 166, 0.3);
+        0 15px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(236, 72, 153, 0.5);
 }
 
 .article-card:nth-child(3n):hover {
-    border-color: rgba(255, 215, 0, 0.5);
-    /* Gold */
+    border-color: rgba(251, 191, 36, 0.8);
+    /* Amber intenso */
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(255, 215, 0, 0.25);
+        0 15px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(251, 191, 36, 0.4);
 }
 
 /* Featured Article Card - LinkedIn */
