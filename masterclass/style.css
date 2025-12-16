@@ -76,18 +76,111 @@
 }
 
 .mc-hero-subtitle {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--accent-gold);
     font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.mc-hero-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Stats Cards */
+.mc-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mc-stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mc-stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(33, 157, 228, 0.4);
+    box-shadow: 0 10px 30px rgba(33, 157, 228, 0.2);
+}
+
+.mc-stat-highlight {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.08));
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+.mc-stat-highlight:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.25);
+}
+
+.mc-stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.mc-stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
 }
 
 .mc-hero-description {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 700px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.mc-hero-description strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* MIT Badge */
+.mc-mit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(33, 157, 228, 0.15), rgba(33, 157, 228, 0.08));
+    border: 1px solid rgba(33, 157, 228, 0.3);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 30px 0;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+}
+
+.mc-mit-badge i {
+    font-size: 1.5rem;
+    color: var(--accent-cyan);
+    flex-shrink: 0;
+}
+
+.mc-mit-badge span {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-style: italic;
 }
 
 .mc-hero-ctas {
@@ -916,6 +1009,12 @@
     .mc-seasons-timeline {
         grid-template-columns: 1fr;
     }
+
+    /* Hero stats responsive */
+    .mc-hero-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -956,6 +1055,20 @@
 
     .mc-faq-item.active .mc-faq-answer {
         padding: 0 20px 20px 60px;
+    }
+
+    /* Hero mobile adjustments */
+    .mc-mit-badge {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .mc-stat-card {
+        padding: 20px 15px;
+    }
+
+    .mc-stat-value {
+        font-size: 2.5rem;
     }
 }
 
