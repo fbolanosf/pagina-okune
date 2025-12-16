@@ -3651,8 +3651,8 @@ ul {
 }
 
 /* ===============================================================
-   BODY AZUL MARINO OSCURO - Elegante y Premium
-   Más oscuro que el fondo para romper monotonía
+   BODY AZUL MARINO OSCURO - Elegante con Luz Indirecta
+   Más oscuro que el fondo con iluminación sutil premium
    =============================================================== */
 
 .article-card .article-content,
@@ -3675,30 +3675,37 @@ ul {
     bottom: 0 !important;
     z-index: -1 !important;
 
-    /* Gradiente AZUL MARINO OSCURO - Más oscuro que #012952 */
+    /* Gradiente OSCURO con más luz arriba (simulando iluminación) */
     background: linear-gradient(135deg,
-            #001529 0%,
-            /* Navy profundo casi negro */
-            #00192b 50%,
+            #002340 0%,
+            /* Navy más claro arriba - "iluminado" */
+            #001529 40%,
+            /* Navy profundo */
+            #00192b 70%,
             /* Navy intermedio */
             #000a14 100%
-            /* Negro azulado */
+            /* Negro azulado abajo */
         ) !important;
 
-    /* Borders elegantes con toques de color */
-    border-top: 1.5px solid rgba(255, 215, 0, 0.15);
-    /* Gold sutil arriba */
-    border-bottom: 1px solid rgba(33, 157, 228, 0.1);
-    /* Cyan sutil abajo */
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    /* Borders con MÁS GLOW para luz indirecta */
+    border-top: 2px solid rgba(255, 215, 0, 0.25);
+    /* Gold MÁS visible arriba */
+    border-bottom: 1px solid rgba(33, 157, 228, 0.15);
+    /* Cyan más visible abajo */
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
 
-    /* Shadows profundas para elegancia */
+    /* Shadows con GLOWS INTENSOS para luz indirecta */
     box-shadow:
         0 10px 40px rgba(0, 0, 0, 0.5),
         0 4px 12px rgba(0, 0, 0, 0.3),
-        inset 0 1px 2px rgba(255, 215, 0, 0.08),
-        /* Glow gold interno arriba */
-        inset 0 -1px 2px rgba(33, 157, 228, 0.08) !important;
-    /* Glow cyan interno abajo */
+        /* Glows internos MÁS FUERTES para iluminación */
+        inset 0 2px 8px rgba(255, 215, 0, 0.15),
+        /* Gold glow arriba */
+        inset 0 -2px 8px rgba(33, 157, 228, 0.12),
+        /* Cyan glow abajo */
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        /* Highlight blanco superior */
+        /* Glow externo sutil dorado para simular luz ambiente */
+        0 0 30px rgba(255, 215, 0, 0.08) !important;
 }
