@@ -1,0 +1,874 @@
+/* ===============================================================
+   MASTER CLASS IA & TRANSFORMACIÓN DIGITAL - MICROSITIO
+   Estilos específicos para el micrositio de Master Class
+   Hereda paleta de colores y tipograf
+
+ías del sitio principal
+   =============================================================== */
+
+/* ================
+   HERO SECTION
+   ================ */
+
+.mc-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #001529 0%, #00192b 50%, #000a14 100%);
+    overflow: hidden;
+}
+
+.mc-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(33, 157, 228, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.08) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.mc-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(1, 41, 82, 0.6);
+    z-index: 1;
+}
+
+.mc-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.mc-badge {
+    display: inline-block;
+    background: rgba(251, 191, 36, 0.2);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    color: #fde68a;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.mc-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mc-hero-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mc-hero-description {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.mc-hero-ctas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+.mc-scroll-indicator {
+    display: inline-block;
+    margin-top: 60px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ================
+   SECTIONS GENERAL
+   ================ */
+
+.mc-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.mc-section:nth-child(even) {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+/* ================
+   ABOUT SECTION
+   ================ */
+
+.mc-about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.mc-about-intro h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mc-about-intro h3 i {
+    color: var(--accent-gold);
+    font-size: 2rem;
+}
+
+.mc-about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.mc-pillars {
+    list-style: none;
+    padding: 0;
+}
+
+.mc-pillars li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--accent-cyan);
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.mc-pillars li i {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.mc-pillars li strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mc-pillars li span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.mc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.mc-feature-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mc-feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(33, 157, 228, 0.3);
+    box-shadow: 0 10px 30px rgba(33, 157, 228, 0.2);
+}
+
+.mc-feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent-cyan);
+    margin-bottom: 15px;
+}
+
+.mc-feature-card h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.mc-feature-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Audience */
+.mc-audience {
+    margin-top: 80px;
+}
+
+.mc-audience h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.mc-audience-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+.mc-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.mc-audience-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mc-audience-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(251, 191, 36, 0.3);
+    transform: translateY(-5px);
+}
+
+.mc-audience-card i {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.mc-audience-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ================
+   SEASONS SECTION
+   ================ */
+
+.mc-seasons {
+    background: rgba(1, 41, 82, 0.3);
+}
+
+.mc-seasons-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.mc-season-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.mc-season-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(33, 157, 228, 0.4);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(33, 157, 228, 0.2);
+}
+
+.mc-season-badge {
+    display: inline-block;
+    background: rgba(251, 191, 36, 0.25);
+    color: #fde68a;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.mc-season-icon {
+    font-size: 3rem;
+    color: var(--accent-cyan);
+    margin-bottom: 20px;
+}
+
+.mc-season-card h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.mc-season-card>p {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.mc-season-topics {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.mc-season-topics li {
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.mc-season-topics li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.mc-season-meta {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-season-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.mc-season-meta i {
+    color: var(--accent-gold);
+}
+
+.mc-seasons-note {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================
+   BENEFITS SECTION
+   ================ */
+
+.mc-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.mc-benefit-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mc-benefit-card:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(251, 191, 36, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(251, 191, 36, 0.15);
+}
+
+.mc-benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(33, 157, 228, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.mc-benefit-icon i {
+    font-size: 2.2rem;
+    color: var(--accent-gold);
+}
+
+.mc-benefit-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.mc-benefit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+}
+
+/* Benefits Comparison */
+.mc-benefits-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-benefit-col h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mc-benefit-col h3 i {
+    color: var(--accent-cyan);
+}
+
+.mc-check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mc-check-list li {
+    padding: 12px 0 12px 35px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    position: relative;
+}
+
+.mc-check-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+}
+
+/* ================
+   FACILITATORS SECTION
+   ================ */
+
+.mc-facilitators {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.mc-facilitators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.mc-facilitator-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mc-facilitator-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(33, 157, 228, 0.3);
+    transform: translateY(-8px);
+}
+
+.mc-facilitator-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(33, 157, 228, 0.2), rgba(251, 191, 36, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-facilitator-avatar i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.mc-facilitator-card h4 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.mc-facilitator-role {
+    color: var(--accent-cyan);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mc-facilitator-bio {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.mc-allies {
+    margin-top: 80px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.mc-allies h4 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* ================
+   TESTIMONIALS SECTION
+   ================ */
+
+.mc-testimonials {
+    background: rgba(1, 41, 82, 0.2);
+}
+
+.mc-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.mc-testimonial-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+}
+
+.mc-quote-icon {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    opacity: 0.3;
+    margin-bottom: 20px;
+}
+
+.mc-testimonial-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.mc-testimonial-author {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-testimonial-author strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.mc-testimonial-author span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Why Now */
+.mc-why-now {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-why-now h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.mc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mc-stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mc-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.mc-stat-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.mc-urgency-quote {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-style: italic;
+    padding: 30px;
+    background: rgba(251, 191, 36, 0.1);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 8px;
+}
+
+/* ================
+   ENROLLMENT SECTION
+   ================ */
+
+.mc-enrollment {
+    background: linear-gradient(135deg, rgba(1, 41, 82, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+}
+
+.mc-enrollment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.mc-enrollment-info h3,
+.mc-enrollment-ctas h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.mc-info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mc-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--accent-cyan);
+}
+
+.mc-info-list i {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.mc-info-list strong {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.mc-info-list span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.mc-enrollment-ctas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mc-enrollment-ctas p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.mc-contact-direct {
+    margin-top: 30px;
+}
+
+.mc-contact-direct p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.mc-contact-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.mc-contact-options a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mc-contact-options a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+/* ================
+   RESPONSIVE
+   ================ */
+
+@media (max-width: 992px) {
+
+    .mc-about-content,
+    .mc-benefits-comparison,
+    .mc-enrollment-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mc-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mc-seasons-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mc-section {
+        padding: 60px 0;
+    }
+
+    .mc-hero {
+        min-height: 70vh;
+    }
+
+    .mc-hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mc-hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mc-audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mc-contact-options {
+        flex-direction: column;
+    }
+
+    .mc-contact-options a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .mc-hero-title {
+        font-size: 2rem;
+    }
+
+    .mc-section-title {
+        font-size: 1.8rem;
+    }
+
+    .mc-stat-number {
+        font-size: 2rem;
+    }
+}
