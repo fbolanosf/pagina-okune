@@ -2744,21 +2744,53 @@ ul {
 }
 
 /* ================================================
-   BODY GLASS MODERNO - Luminoso y Premium
+   BODY GLASS MODERNO - A PRUEBA DE TODO
+   Usa pseudo-elemento para garantizar que funcione
    ================================================ */
 .article-content {
     padding: 22px;
-    /* GLASS EFFECT: blanco translúcido + blur */
-    background: rgba(255, 255, 255, 0.14);
-    /* Blanco 14% */
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    /* Border glass sutil */
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* FONDO TRANSPARENTE - elimina azul completamente */
+    background: transparent !important;
+    /* Posición relativa para el pseudo-elemento */
+    position: relative;
+    z-index: 1;
+    /* Overflow hidden para respetar border-radius */
+    overflow: hidden;
     border-radius: 0 0 14px 14px;
-    /* Redondeo inferior */
-    /* Shadow suave para profundidad */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Capa GLASS usando ::before - vive DEBAJO del contenido */
+.article-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* DEBAJO del contenido */
+
+    /* GLASS EFFECT REAL */
+    background: rgba(255, 255, 255, 0.16);
+    /* Blanco 16% más visible */
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    /* Safari */
+
+    /* Border glass en la parte superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* Shadow para profundidad */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Contenido sobre la capa glass */
+.article-content>* {
+    position: relative;
+    z-index: 2;
+    /* ENCIMA de la capa glass */
 }
 
 .article-tag {
